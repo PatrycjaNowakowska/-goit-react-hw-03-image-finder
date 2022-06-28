@@ -17,7 +17,7 @@ export class App extends Component {
     page: 1,
     totalPages: 0,
     webformatURL: '',
-    bigImage: '',
+    largeImageURL: '',
     isLoading: false,
     showModal: false,
     showButton: true,
@@ -51,7 +51,7 @@ export class App extends Component {
 
   openModal = e => {
     this.setState(() => ({
-      bigImage: e.target.dataset.source,
+      largeImageURL: e.target.dataset.source,
       tags: e.target.alt,
     }));
     this.toogleModal();
@@ -130,7 +130,7 @@ export class App extends Component {
 
         {this.state.showModal && (
           <Modal
-            bigImage={this.state.bigImage}
+            largeImageURL={this.state.largeImageURL}
             tags={this.state.tags}
             toogleModal={this.toogleModal}
           />

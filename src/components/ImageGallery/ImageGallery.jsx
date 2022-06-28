@@ -6,11 +6,11 @@ import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
 function ImageGallery({ images, openModal }) {
   return (
     <ul className={styles.ImageGallery}>
-      {images.map(({ id, webformatURL, bigImage, tags }) => (
+      {images.map(({ id, webformatURL, largeImageURL, tags }) => (
         <ImageGalleryItem
           key={id}
           webformatURL={webformatURL}
-          bigImage={bigImage}
+          largeImageURL={largeImageURL}
           tags={tags}
           openModal={openModal}
         />
